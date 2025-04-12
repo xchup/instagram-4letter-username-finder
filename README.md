@@ -1,6 +1,6 @@
 # Instagram 4-Letter Username Finder
 
-This project is a tool to find untaken 5-character Instagram usernames, which are considered rare these days. The script generates usernames and checks their availability on Instagram, and it notifies you via Telegram if a good username is found.
+This project is a tool to find untaken 4-character Instagram usernames, which are considered rare these days. The script generates usernames and checks their availability on Instagram, and it notifies you via Telegram if a good username is found.
 
 ## Features
 
@@ -84,7 +84,7 @@ This project is a tool to find untaken 5-character Instagram usernames, which ar
 
 3. **Run the Script**:
     ```bash
-    python 4lfinderbyk3s63.py
+    python 4lfinderbyxchup.py
     ```
   
 
