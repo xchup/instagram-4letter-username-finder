@@ -43,13 +43,18 @@ token = input('\033[1;32mTELEGRAM TOKEN : ')
 telegram_user_id = input('\033[1;31mTELEGRAM ID : ')
 
 # Username generator (4-letter usernames)
-async def generate_username(length=4):
+async def generate_username():
     characters = string.ascii_lowercase + string.digits
-    username = ''.join(random.choice(characters) for _ in range(length))
-    separator = random.choice(['.', '_'])
-    index = random.randint(1, length - 1)
-    username_with_separator = username[:index] + separator + username[index:]
-    return username_with_separator
+    separator = random.choice(['.', '_', ''])  # include empty string for no separator
+
+    if separator:  # if a separator is chosen
+        base = ''.join(random.choice(characters) for _ in range(3))  # 3 characters
+        index = random.randint(1, 2)  # separator between 1 and 2
+        username = base[:index] + separator + base[index:]  # add separator
+    else:
+        username = ''.join(random.choice(characters) for _ in range(4))  # 4 characters without separator
+
+    return username
 
 # Instagram checker
 async def create_instagram_account(session):
@@ -95,7 +100,7 @@ async def send_telegram_message(username):
 # Main loop
 async def main():
     async with aiohttp.ClientSession() as session:
-        tasks = [create_instagram_account(session) for _ in range(10)]
+        tasks = [create_instagram_account(session) for _ in range(10)]  # Modify loop range if needed
         await asyncio.gather(*tasks)
 
 asyncio.run(main())
