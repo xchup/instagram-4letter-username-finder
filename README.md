@@ -99,4 +99,4 @@ Full license text: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/l
 ## Contact
 
 - Programmer: BRYT ([@xchup](https://t.me/xchup))
-- channel: @bryyyyyt ([channel✅](https://t.me/pythontoolgod))
+- channel: @bryyyyyt ([channel✅](https://t.me/bryyyyyt))
